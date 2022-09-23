@@ -14,22 +14,22 @@
 (function() {
     'use strict';
 
-	var clicked = false
+	var buttonDesc_clicked = false
 
-    var button = document.createElement("Button");
-    button.innerHTML = "Rozwiń";
-    button.style = "width: 70px; margin: 0 10px 0 0; border-radius: 12px; font-size: 12px; border: 1px solid #FF650F; color: #FF650F; background-color: #fff;";
+    var buttonDesc = document.createElement("Button");
+    buttonDesc.innerHTML = "Rozwiń";
+    buttonDesc.style = "width: 70px; margin: 0 10px 0 0; border-radius: 12px; font-size: 12px; border: 1px solid #FF650F; color: #FF650F; background-color: #fff;";
 
     function ButtonClickAction (zEvent) {
-        if (clicked==false) {
+        if (buttonDesc_clicked==false) {
 			var divs = document.querySelectorAll('.plusSign');
 			var i;
 
 			for (i = 0; i < divs.length; ++i) {
 				divs[i].click();
 			};
-            clicked = true;
-            button.innerHTML = "Zwiń";
+            buttonDesc_clicked = true;
+            buttonDesc.innerHTML = "Zwiń";
 		} else {
 			divs = document.querySelectorAll('.minusSign');
 
@@ -39,19 +39,19 @@
 				divs[j].click();
 			};
 
-            clicked = false;
-            button.innerHTML = "Rozwiń";
+            buttonDesc_clicked = false;
+            buttonDesc.innerHTML = "Rozwiń";
 		}
     }
 
-	document.body.appendChild(button);
+	document.body.appendChild(buttonDesc);
 
-    button.addEventListener (
+    buttonDesc.addEventListener (
         "click", ButtonClickAction, false
     );
 
- var elmFoo = document.getElementById('menu-item-53');
- elmFoo.parentNode.insertBefore(button, elmFoo);
+ var menuItemDesc = document.getElementById('menu-item-53');
+ elmFoo.parentNode.insertBefore(buttonDesc, menuItemDesc);
 
 
 })();
