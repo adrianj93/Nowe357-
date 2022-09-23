@@ -5,8 +5,8 @@
 // @description  Nowe357+
 // @author       adrianj
 // @match        https://www2.radio357.pl/*
-// @updateURL    https://github.com/adrianj93/Nowe357-/blob/main/Nowe357%2B.user.js
-// @downloadURL  https://github.com/adrianj93/Nowe357-/blob/main/Nowe357%2B.user.js
+// @updateURL    https://github.com/adrianj93/Nowe357-/raw/main/Nowe357%2B.user.js
+// @downloadURL  https://github.com/adrianj93/Nowe357-/raw/main/Nowe357%2B.user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=radio357.pl
 // @grant        none
 // ==/UserScript==
