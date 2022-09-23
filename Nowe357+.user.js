@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nowe357+
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.31
 // @description  Nowe357+
 // @author       adrianj
 // @match        https://www2.radio357.pl/*
