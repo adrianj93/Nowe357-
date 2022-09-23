@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nowe357+
 // @namespace    http://tampermonkey.net/
-// @version      0.32
+// @version      0.3.1
 // @description  Nowe357+
 // @author       adrianj
 // @match        https://www2.radio357.pl/*
@@ -51,7 +51,7 @@
     );
 
  var menuItemDesc = document.getElementById('menu-item-53');
- elmFoo.parentNode.insertBefore(buttonDesc, menuItemDesc);
+ menuItemDesc.parentNode.insertBefore(buttonDesc, menuItemDesc);
 
 
 })();
