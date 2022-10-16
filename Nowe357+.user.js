@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nowe357+
 // @namespace    http://tampermonkey.net/
-// @version      0.3.4
+// @version      0.4b1
 // @description  Nowe357+
 // @author       adrianj
 // @match        https://radio357.pl/*
@@ -53,5 +53,41 @@
  var menuItemDesc = document.getElementById('menu-item-53');
  menuItemDesc.parentNode.insertBefore(buttonDesc, menuItemDesc);
 
+<!--####################-->
+
+    var buttonTwoje_clicked = false
+
+    var buttonTwoje = document.createElement("Button");
+    buttonTwoje.innerHTML = "Pokaż tylko ekskluzywne podcasty";
+    buttonTwoje.style = "width: 300px; margin: 10px 0 10px 0; border-radius: 20px; font-size: 12px; border: 1px solid #FF650F; color: #FF650F; background-color: #fff;";
+
+    function ButtonTwojeClickAction (zEvent) {
+        if (buttonTwoje_clicked==false) {
+            jQuery(function($) {
+                $("article.col-12")	.hide ()
+                    .has ("span:contains('Tylko w twoje 357')")
+                    .show ();
+            });
+            buttonTwoje_clicked = true;
+            buttonTwoje.innerHTML = "Pokaż wszystkie podcasty";
+		} else {
+            jQuery(function($) {
+                $("article.col-12")	.show ()
+                    .has ("span:contains('Tylko w twoje 357')")
+                    .show ();
+            });
+            buttonTwoje_clicked = false;
+            buttonTwoje.innerHTML = "Pokaż tylko ekskluzywne podcasty";
+		}
+    }
+
+	document.body.appendChild(buttonTwoje);
+
+    buttonTwoje.addEventListener (
+        "click", ButtonTwojeClickAction, false
+    );
+
+ var menuItemTwoje = document.getElementById('ajaxProgram');
+ menuItemTwoje.parentNode.insertBefore(buttonTwoje, menuItemTwoje);
 
 })();
